@@ -1,0 +1,26 @@
+.DS_Store
+
+# Logs
+*.log
+
+# Dependency directories
+node_modules/
+
+# TypeScript v1 declaration files
+typings/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# IDEs
+.vscode/*
+.idea/*
+
+# Build
+/lib
