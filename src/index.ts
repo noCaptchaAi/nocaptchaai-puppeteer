@@ -17,8 +17,8 @@ export const solveCaptcha = async (page: Page, apiKey: string, uid: string): Pro
   const outerFrame = await outer?.contentFrame();
   const inner = await page.waitForSelector('iframe:not([data-hcaptcha-response])');
   const innerFrame = await inner?.contentFrame();
-  if (!innerFrame) throw new Error('solveCaptcha: captcha inner frame not found');
   if (!outerFrame) throw new Error('solveCaptcha: captcha outer frame not found');
+  if (!innerFrame) throw new Error('solveCaptcha: captcha inner frame not found');
 
   const checkbox = await outerFrame.waitForSelector('#checkbox');
   await checkbox?.click();
@@ -40,12 +40,12 @@ export const solveCaptcha = async (page: Page, apiKey: string, uid: string): Pro
         CAPTCHA_API_URL,
         {
           softid: 'pptr-pkg',
-          ln: language,
+          method: 'hcaptcha_base64',
           site: page.url(),
+          ln: language,
           sitekey,
           images,
-          target,
-          method: 'hcaptcha_base64'
+          target
         },
         {
           headers: {
