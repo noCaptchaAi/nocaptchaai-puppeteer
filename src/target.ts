@@ -1,4 +1,4 @@
-import type { Frame } from 'puppeteer-core';
+import type { Frame } from 'puppeteer';
 
 export const getTarget = async (frame: Frame): Promise<string> => {
   const targetElement = await frame.$('.prompt-text');

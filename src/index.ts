@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { Page } from 'puppeteer-core';
+import type { Page } from 'puppeteer';
 import { CAPTCHA_API_URL } from './constants';
 import { getImages } from './images';
 import { getTarget } from './target';
