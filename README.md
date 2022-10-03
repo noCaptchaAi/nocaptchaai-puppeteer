@@ -11,11 +11,15 @@
 
 ## ❔ Introduction
 
-Blazing fast hCaptcha solver based on NeuralNet image detection AI.
+Blazing fast hCaptcha solver based on NeuralNet image detection AI. Plug & Play package for solving hCaptcha and reCaptcha (soon) with Puppeteer.
 
 ## 🆓 Trial
 
 Take a look at <a href="https://nocaptchaai.com/register">Here 🔥</a>
+
+## ⭐️ Demo
+
+https://user-images.githubusercontent.com/25561893/193601115-45613676-f27e-421d-99f4-13077ff25a66.mp4
 
 ## ⚙️ Install
 
@@ -43,7 +47,7 @@ pnpm add nocaptchaai-puppeteer
 import { solveCaptcha } from 'nocaptchaai-puppeteer';
 import puppeteer from 'puppeteer';
 
-const URL = 'https://shimuldn.github.io/hCaptchaSolverApi/demo_data/demo_sites/1/';
+const URL = 'https://accounts.hcaptcha.com/demo';
 
 const API_KEY = ''; // <-- your API key here
 const UID = ''; // <-- your UID here
