@@ -56,21 +56,47 @@ export const solveCaptcha = async (page: Page, apiKey: string, uid: string): Pro
         }
       );
 
-      if (query.status === 'new') {
-        await sleep(1000);
-
-        let solved = false;
-        while (!solved) {
-          const { data: result } = await axios.get(query.url);
-
-          if (result.status === 'solved') {
-            for (const item of result.solution) {
-              await imageElements[item].click();
-              await sleep(200);
-            }
-
-            solved = true;
+      switch (query.status) {
+        case 'solved': {
+          for (const item of query.solution) {
+            await imageElements[item].click();
+            await sleep(200);
           }
+
+          break;
+        }
+
+        case 'new': {
+          for (let i = 0; i < 10; i++) {
+            await sleep(1000);
+            const { data: result } = await axios.get(query.url);
+
+            if (result.status === 'solved') {
+              for (const item of result.solution) {
+                await imageElements[item].click();
+                await sleep(200);
+              }
+
+              break;
+            }
+          }
+
+          break;
+        }
+
+        case 'skip': {
+          console.error(query.message);
+          throw new Error('Seems this a new challenge, please contact support!');
+        }
+
+        case 'error': {
+          console.error(query.message);
+          throw new Error('Error');
+        }
+
+        default: {
+          console.error(query);
+          throw new Error('Unknown status');
         }
       }
 
