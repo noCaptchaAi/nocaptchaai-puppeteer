@@ -19,7 +19,7 @@ Take a look at <a href="https://nocaptchaai.com/register">Here 🔥</a>
 
 ## ⭐️ Demo
 
-https://user-images.githubusercontent.com/25561893/193601115-45613676-f27e-421d-99f4-13077ff25a66.mp4
+https://user-images.githubusercontent.com/4178343/193613698-fed0f223-bf23-43e2-8e6a-7732b3a4b64f.mp4
 
 ## ⚙️ Install
 
@@ -71,6 +71,6 @@ main();
 
 ## 💬 Community
 
-- [Discord](https://discord.gg/E7FfzhZqzA)
+- [Discord](https://discord.com/invite/E7FfzhZqzA)
 
 - [Telegram](https://t.me/noCaptchaAi)
