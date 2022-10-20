@@ -1,9 +1,9 @@
 import axios from 'axios';
 import type { Page } from 'puppeteer';
-import { CAPTCHA_API_URL } from './constants';
 import { getImages } from './images';
 import { getTarget } from './target';
-import { sleep } from './utils';
+import type { subscriptionType } from './type';
+import { getApiUrl, sleep } from './utils';
 
 /**
  * Solve captchas using `nocaptchaai.com` API service
@@ -11,8 +11,14 @@ import { sleep } from './utils';
  * @param page - Puppeteer page instance
  * @param apiKey - API key
  * @param uid - UID
+ * @param type - `free` or `pro`
  */
-export const solveCaptcha = async (page: Page, apiKey: string, uid: string): Promise<void> => {
+export const solveCaptcha = async (
+  page: Page,
+  apiKey: string,
+  uid: string,
+  type: subscriptionType
+): Promise<void> => {
   const outer = await page.waitForSelector('iframe[data-hcaptcha-response]');
   const outerFrame = await outer?.contentFrame();
   const inner = await page.waitForSelector('iframe:not([data-hcaptcha-response])');
@@ -37,7 +43,7 @@ export const solveCaptcha = async (page: Page, apiKey: string, uid: string): Pro
       if (!imageElements) throw new Error('solveCaptcha: captcha images found');
 
       const { data: query } = await axios.post(
-        CAPTCHA_API_URL,
+        getApiUrl(type),
         {
           softid: 'pptr-pkg',
           method: 'hcaptcha_base64',
