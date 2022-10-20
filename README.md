@@ -41,33 +41,9 @@ yarn add nocaptchaai-puppeteer
 pnpm add nocaptchaai-puppeteer
 ```
 
-## 🧪 Usage
+## 🧪 Example
 
-```typescript
-import { solveCaptcha } from 'nocaptchaai-puppeteer';
-import puppeteer from 'puppeteer';
-
-const URL = 'https://accounts.hcaptcha.com/demo';
-
-const API_KEY = ''; // <-- your API key here
-const UID = ''; // <-- your UID here
-
-const main = async (): Promise<void> => {
-  const browser = await puppeteer.launch({ headless: false });
-  const page = await browser.newPage();
-
-  await page.goto(URL);
-  await page.waitForNetworkIdle();
-
-  await solveCaptcha(page, API_KEY, UID);
-
-  await page.screenshot();
-
-  await browser.close();
-};
-
-main();
-```
+Please take a look at [here](./example/index.ts)!
 
 ## 💬 Community
 
