@@ -21,10 +21,10 @@
     "outDir": "./lib",
     "removeComments": false,
     "resolveJsonModule": true,
-    "rootDir": "./src",
+    "rootDir": ".",
     "strict": true,
     "target": "ESNext"
   },
-  "include": ["./src/**/*.ts"],
+  "include": ["./src/**/*.ts", "./example/**/*.ts"],
   "exclude": ["node_modules", "lib"]
 }
