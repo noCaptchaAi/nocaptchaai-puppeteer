@@ -13,9 +13,10 @@
 
 Blazing fast hCaptcha solver based on NeuralNet image detection AI. Plug & Play package for solving hCaptcha and reCaptcha (soon) with Puppeteer.
 
-## 🆓 Trial
+## 🆓 Free Solving Plan: 6000/month
 
-Take a look at <a href="https://nocaptchaai.com/register">Here 🔥</a>
+- Get Free API <a href="https://nocaptchaai.com">Here 🔥</a>
+- Buy Cheap Paid Plans <a href="https://nocaptchaai.com/plans">Here 🔥</a>
 
 ## ⭐️ Demo
 
