@@ -29,7 +29,8 @@ export const solveCaptcha = async (
   if (!innerFrame) throw new Error('solveCaptcha: captcha inner frame not found');
 
   const checkbox = await outerFrame.waitForSelector('#checkbox');
-  await checkbox?.click();
+
+  if (!(await innerFrame.$('.challenge'))) await checkbox?.click();
 
   // await sleep(500000); // debug waiting
 
