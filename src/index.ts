@@ -42,7 +42,7 @@ export const solveCaptcha = async (
 
     const sitekey = findURLParam(new URLSearchParams(innerFrame.url()), key =>
       key.includes('sitekey')
-    );
+    )[1];
 
     await innerFrame.waitForSelector('.challenge-container', { timeout: 10 * 1000 });
 
