@@ -3,3 +3,4 @@ node_modules
 lib
 pnpm-lock.yaml
 example
+puppeteer-hcaptcha-solver
