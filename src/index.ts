@@ -3,7 +3,7 @@ import type { Page } from 'puppeteer';
 import { getImages } from './images';
 import { getTarget } from './target';
 import { randTimer, subscriptionType } from './type';
-import { getApiUrl, sleep } from './utils';
+import { findURLParam, getApiUrl, sleep } from './utils';
 
 /**
  * Solve captchas using `nocaptchaai.com` API service
@@ -29,7 +29,8 @@ export const solveCaptcha = async (
   if (!innerFrame) throw new Error('solveCaptcha: captcha inner frame not found');
 
   const checkbox = await outerFrame.waitForSelector('#checkbox');
-  await checkbox?.click();
+
+  if (!(await innerFrame.$('.challenge'))) await checkbox?.click();
 
   // await sleep(500000); // debug waiting
 
@@ -39,7 +40,9 @@ export const solveCaptcha = async (
 
     if (debug) console.log('🌍 Language found = ', language);
 
-    const sitekey = await page.$eval('.h-captcha', el => el.getAttribute('data-sitekey'));
+    const sitekey = findURLParam(new URLSearchParams(innerFrame.url()), key =>
+      key.includes('sitekey')
+    )[1];
 
     await innerFrame.waitForSelector('.challenge-container', { timeout: 10 * 1000 });
 
