@@ -9,11 +9,13 @@
 
 </div>
 
-## ❔ Introduction
+## About noCaptchaAi.com
 
-Blazing fast hCaptcha solver based on NeuralNet image detection AI. Plug & Play package for solving hCaptcha and reCaptcha (soon) with Puppeteer.
+Fastest solving 0.02s ~ 0.5s anywhere.
 
-## 🆓 Free Solving Plan: 6000/month
+HCAPTCHA Solver CAPTCHA solver with Puppeteer.  Cheapest plans, deployable api and dedicated support.
+
+### Free Solving Plan: 6000/month
 
 - Get Free API <a href="https://nocaptchaai.com">Here 🔥</a>
 - Buy Cheap Paid Plans <a href="https://nocaptchaai.com/plans">Here 🔥</a>
