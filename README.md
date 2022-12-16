@@ -24,6 +24,12 @@ https://user-images.githubusercontent.com/4178343/193613698-fed0f223-bf23-43e2-8
 
 ## ⚙️ Install
 
+- Grab latest fixes
+
+```bash
+git clone https://github.com/noCaptchaAi/nocaptchaai-puppeteer
+```
+
 - npm:
 
 ```bash
