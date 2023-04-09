@@ -23,3 +23,6 @@ export const findURLParam = (
   return [key, params.get(key)!];
   /* eslint-enable @typescript-eslint/no-non-null-assertion */
 };
+
+export const random = (min: number, max: number): number =>
+  Math.floor(Math.random() * (max - min) + min);
