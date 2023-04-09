@@ -19,8 +19,8 @@
     "prepare": "husky install"
   },
   "engines": {
-    "node": ">=14",
-    "pnpm": ">=7"
+    "node": ">=18",
+    "pnpm": ">=8"
   },
   "homepage": "https://nocaptchaai.com",
   "repository": {
