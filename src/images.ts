@@ -4,6 +4,8 @@ import { getBase64 } from './base64';
 export const getImages = async (frame: Frame): Promise<{ [key: number]: string }> => {
   const data: { [key: number]: string } = {};
 
+  await frame.waitForSelector('.image');
+
   await frame.waitForFunction(() => {
     const wrapperLoaded = document.querySelector('.task-image .image');
     const imagesLoaded: boolean[] = [];
