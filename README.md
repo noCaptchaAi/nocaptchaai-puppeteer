@@ -13,14 +13,14 @@
 
 Fastest solving 0.02s ~ 0.5s anywhere.
 
-HCAPTCHA Solver CAPTCHA solver with Puppeteer.  Cheapest plans, deployable api and dedicated support.
+HCAPTCHA Solver CAPTCHA solver with Puppeteer. Cheapest plans, deployable api and dedicated support.
 
 ### Free Solving Plan: 6000/month
 
 - Get Free API <a href="https://nocaptchaai.com">Here 🔥</a>
 - Buy Cheap Paid Plans <a href="https://nocaptchaai.com/plans">Here 🔥</a>
 
-## Quickstart with demo 
+## Quickstart with demo
 
 ```bash
 git clone https://github.com/noCaptchaAi/puppeteer-hcaptcha-solver
