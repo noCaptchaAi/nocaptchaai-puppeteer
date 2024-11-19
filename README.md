@@ -13,7 +13,7 @@
 
 Fastest solving 0.02s ~ 0.5s anywhere.
 
-HCAPTCHA Solver CAPTCHA solver with Puppeteer. Cheapest plans, deployable api and dedicated support.
+qCaptcha Solver CAPTCHA solver with Puppeteer. Cheapest plans, deployable api and dedicated support.
 
 ### Free Solving Plan: 6000/month
 
@@ -23,8 +23,8 @@ HCAPTCHA Solver CAPTCHA solver with Puppeteer. Cheapest plans, deployable api an
 ## Quickstart with demo
 
 ```bash
-git clone https://github.com/noCaptchaAi/puppeteer-hcaptcha-solver
-cd puppeteer-hcaptcha-solver
+git clone https://github.com/noCaptchaAi/puppeteer-qCaptcha-solver
+cd puppeteer-qCaptcha-solver
 npm i
 npm run start
 ```
